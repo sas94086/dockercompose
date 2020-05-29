@@ -6,17 +6,17 @@ steps:
           - hooks/**
           - lib/**
           - commands/**
-      
+          
+  - label: ":bash: Tests"
     plugins:
-      docker-compose#v3.3.0
-        run: echo "docker-version test"
+      docker-compose#v3.3.0:
+        run: tests
 
   - label: ":sparkles: Lint"
     plugins:
       plugin-linter#v2.0.0:
         id: docker-compose
        
-
   - label: ":bash: Tests"
     plugins:
       ${BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
