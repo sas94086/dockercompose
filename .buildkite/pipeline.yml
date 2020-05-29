@@ -6,12 +6,6 @@ steps:
           - hooks/**
           - lib/**
           - commands/**
-          
-  - name:  docker-compose-check %n"
-    command: echo "dockerVer-test"
-    plugins:
-      - docker-compose#v3.3.0:
-        run: app
         
 
   - label: ":sparkles: Lint"
