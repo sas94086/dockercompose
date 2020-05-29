@@ -7,13 +7,16 @@ steps:
           - lib/**
           - commands/**
           
-  - label: ":bash: Tests"
+  - name:  docker-compose-check %n"
+    command: echo "dockerVer-test"
     plugins:
-      docker-compose#v3.3.0:
-        run: tests
+      - docker-compose#v3.3.0:
+        run: app
+        
 
   - label: ":sparkles: Lint"
     plugins:
+      docker-compose#v3.3.0:
       plugin-linter#v2.0.0:
         id: docker-compose
        
