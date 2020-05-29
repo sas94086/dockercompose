@@ -7,10 +7,9 @@ steps:
           - lib/**
           - commands/**
       
-  - name: "Docker Test %n"
-  command: "echo Testing docker Version"
-  plugins:
-    - docker-compose#v3.3.0
+    plugins:
+      docker-compose#v3.3.0
+        run: echo "docker-version test"
 
   - label: ":sparkles: Lint"
     plugins:
