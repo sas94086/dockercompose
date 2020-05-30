@@ -12,10 +12,10 @@ steps:
       plugin-linter#v2.0.0:
         id: docker-compose
        
-  - label: ":bash: Tests"
+  - label: ":bash: Tests"$
     plugins:
-      - docker-compose#v3.3.0:
-        run:  tests
+      {BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
+        run: tests
 
   - wait
   - label: run, with links that fail
