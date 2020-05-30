@@ -12,11 +12,11 @@ steps:
       plugin-linter#v2.0.0:
         id: docker-compose
        
-  - name: "Docker Test %n"
-  command: python testareacalc.py
-  plugins:
-    - docker-compose#v3.3.0:
-        run: app
+  - label: ":shell: DockerTest"
+    command: python testareacalc.py
+    plugins:
+      - docker-compose#v3.3.0:
+          run: app
 
   - wait
   - label: run, with links that fail
