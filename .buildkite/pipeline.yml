@@ -13,10 +13,9 @@ steps:
         id: docker-compose
        
   - label: ":bash: Tests"
-  - command: yarn install && yarn run test
     plugins:
       ${BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
-        run: "python testareacalc.py"
+        run: tests
 
   - wait
   - label: run, with links that fail
