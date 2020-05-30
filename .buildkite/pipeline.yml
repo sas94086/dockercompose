@@ -52,7 +52,7 @@ steps:
     plugins:
          - docker-compose#v3.3.0:
              build: helloworld
-             image-repository: ${DOCKER_REPO-buildkiteci/docker-compose-buildkite-plugin}
+             image-repository: sas94086/sandratest01:docker-compose-v2.0
              config: tests/composefiles/docker-compose.v2.0.yml
 
   - wait
@@ -61,7 +61,7 @@ steps:
        - docker-compose#v3.3.0:
            run: helloworld
            require-prebuild: true
-           config: tests/composefiles/docker-compose.v2.0.yml
+           config: tests/composefiles/docker-compose-v2.0.yml
            command: ["/hello"]
 
   - wait
@@ -70,7 +70,7 @@ steps:
     plugins:
        - docker-compose#v3.3.0:
             build: helloworld
-            image-repository: sas94086/sandratest01:docker-compose-buildkite-plugin
+            image-repository: sas94086/sandratest01:docker-compose-v2.1
             config: tests/composefiles/docker-compose.v2.1.yml
 
   - wait
