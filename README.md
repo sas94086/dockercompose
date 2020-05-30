@@ -15,7 +15,7 @@ The following pipeline will run `test.sh` inside a `app` service container using
 steps:
   - command: test.sh
     plugins:
-      - docker-compose#v3.2.0:
+      - docker-compose#v3.3.0:
           run: app
 ```
 
@@ -61,7 +61,7 @@ steps:
     plugins:
       - docker-login#v2.0.1:
           username: xyz
-      - docker-compose#v3.2.0:
+      - docker-compose#v3.3.0:
           run: app
 ```
 
