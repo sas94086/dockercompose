@@ -14,8 +14,8 @@ steps:
        
   - label: ":bash: Tests"
     plugins:
-      ${BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
-        run: ../tests
+      - docker-compose#v3.3.0:
+        run:  tests
 
   - wait
   - label: run, with links that fail
