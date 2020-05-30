@@ -13,7 +13,7 @@ steps:
         id: docker-compose
        
   - label: ":bash: Test"
-    command: echo "A python test"
+    command: echo "A Series of tests"
     plugins:
       - docker-compose#v3.3.0:
           run: tests
