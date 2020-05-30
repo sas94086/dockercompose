@@ -5,8 +5,7 @@ steps:
         files:
           - hooks/**
           - lib/**
-          - commands/**
-        
+          - commands/**       
 
   - label: ":sparkles: Lint"
     plugins:
@@ -16,7 +15,7 @@ steps:
   - label: ":bash: Tests"
     plugins:
       ${BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
-        run: tests
+        run: ../tests
 
   - wait
   - label: run, with links that fail
