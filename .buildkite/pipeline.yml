@@ -10,7 +10,6 @@ steps:
 
   - label: ":sparkles: Lint"
     plugins:
-      docker-compose#v3.3.0:
       plugin-linter#v2.0.0:
         id: docker-compose
        
