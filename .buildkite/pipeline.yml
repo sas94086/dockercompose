@@ -70,7 +70,7 @@ steps:
     plugins:
        - docker-compose#v3.3.0:
             build: helloworld
-            image-repository: https://hub.docker.com/repository/docker/sas94086/sandratest01
+            image-repository: index.docker.io/sas94086/sandratest01
             config: tests/composefiles/docker-compose.v2.1.yml
 
   - wait
