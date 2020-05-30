@@ -12,10 +12,11 @@ steps:
       plugin-linter#v2.0.0:
         id: docker-compose
        
-  - label: ":bash: Tests"
-    plugins:
-      ${BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
-        run: tests/composefiles/docker-compose.v3.2.yml
+  - name: "Docker Test %n"
+  command: python testareacalc.py
+  plugins:
+    - docker-compose#v3.3.0:
+        run: app
 
   - wait
   - label: run, with links that fail
