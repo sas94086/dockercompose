@@ -16,7 +16,7 @@ steps:
     command: echo "A python test"
     plugins:
       - docker-compose#v3.3.0:
-          run: cat /etc
+          run: tests
 
   - wait
   - label: run, with links that fail
