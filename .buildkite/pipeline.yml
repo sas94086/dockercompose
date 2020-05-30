@@ -14,7 +14,7 @@ steps:
        
   - label: ":bash: Tests"
     plugins:
-      {BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
+      ${BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
         run: tests
 
   - wait
