@@ -112,7 +112,7 @@ steps:
     plugins:
        - docker-compose#v3.3.0:
            build: helloworld
-           image-repository: https://us-west-1.console.aws.amazon.com/ec2/v2/home?region=us-west-1#Images:sas94086DockerTest
+           image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086:latest
            image-name: llamas-build-${BUILDKITE_BUILD_NUMBER}
            config: tests/composefiles/docker-compose.v2.1.yml
 
