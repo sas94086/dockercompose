@@ -22,9 +22,9 @@ steps:
   - label: run, with links that fail
     command: echo hello from alpine
     plugins:
-      ${BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
-        run: alpinewithfailinglink
-        config: tests/composefiles/docker-compose.v2.1.yml
+       - docker-compose#v3.3.0::
+           run: alpinewithfailinglink
+           config: tests/composefiles/docker-compose.v2.1.yml
 
   - wait
   - label: run, with environment
