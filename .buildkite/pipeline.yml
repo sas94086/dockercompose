@@ -52,7 +52,7 @@ steps:
     plugins:
          - docker-compose#v3.3.0:
              build: helloworld
-             image-repository: sas94086/sandratest01
+             image-repository: index.docker.io/sas94086/sandratest01
              config: tests/composefiles/docker-compose.v2.0.yml
 
   - wait
