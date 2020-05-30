@@ -15,7 +15,7 @@ steps:
   - label: ":bash: Tests"
     plugins:
       ${BUILDKITE_REPO}#${BUILDKITE_COMMIT}:
-        run: tests
+        run: tests/composefiles/docker-compose.v3.2.yml
 
   - wait
   - label: run, with links that fail
