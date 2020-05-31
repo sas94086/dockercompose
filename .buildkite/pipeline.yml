@@ -50,9 +50,14 @@ steps:
   - label: prebuild with v2.0
     command: /hello
     plugins:
+      - ecr#v1.1.4:
+        login: true
+        account_ids: 424332672450
+        no-include-email: true
+        region: us-west-1
        - docker-compose#v3.3.0:
             build: helloworld
-            image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086
+            image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086:latest
             config: tests/composefiles/docker-compose.v2.0.yml
 
   - wait
