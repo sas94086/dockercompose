@@ -69,7 +69,7 @@ steps:
     plugins:
        - docker-compose#v3.3.0:
             build: helloworld
-            image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com
+            image: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086:latest
             config: tests/composefiles/docker-compose.v2.1.yml
 
   - wait
@@ -93,7 +93,7 @@ steps:
     plugins:
        - docker-compose#v3.3.0:
            build: helloworldimage
-           image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086:latest
+ 
            config: tests/composefiles/docker-compose.v2.1.yml
            commmand: ["/hello"]
 
