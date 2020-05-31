@@ -50,10 +50,6 @@ steps:
   - label: prebuild with v2.0
     command: /hello
     plugins:
-       - ecr#v1.1.4:
-            login: true
-            account_ids: "424332672450"
-            no-include-email: true
        - docker-compose#v3.3.0:
             build: helloworld
             image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086
