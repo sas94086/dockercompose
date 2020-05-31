@@ -52,7 +52,7 @@ steps:
     plugins:
        - docker-compose#v3.3.0:
             build: helloworld
-            image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086
+            image-repository: index.docker.io/424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086
             config: tests/composefiles/docker-compose.v2.0.yml
 
   - wait
