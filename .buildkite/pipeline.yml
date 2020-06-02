@@ -106,14 +106,14 @@ steps:
   #        config: tests/composefiles/docker-compose.v2.1.yml
   #         commmand: ["/hello"]
 
-  #- wait
-  #- label: prebuild with custom image-name
-  #  plugins:
-  #     - docker-compose#v3.3.0:
-  #         build: helloworld
-  #        image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086
-  #         image-name: llamas-build-${BUILDKITE_BUILD_NUMBER}
-  #         config: tests/composefiles/docker-compose.v2.1.yml
+  - wait
+  - label: prebuild with custom image-name
+    plugins:
+       - docker-compose#v3.3.0:
+           build: helloworld
+           image-repository: 424332672450.dkr.ecr.us-west-1.amazonaws.com/sas94086-2
+           image-name: llamas-build-${BUILDKITE_BUILD_NUMBER}
+           config: tests/composefiles/docker-compose.v2.1.yml
 
   #- wait
   #- label: run after prebuild with custom image-name
