@@ -46,14 +46,13 @@ steps:
             run: alpinewithenv
             config: tests/composefiles/docker-compose.v2.1.yml
 
-  - wait
-  - label: prebuild with v2.0
-    command: /hello
-    plugins:
-       - docker-compose#v3.3.0:
-            build: helloworld
-            image-repository: 424332672450.dkr.ecr.us-west-1.amazonaws.com/sas94086-2
-            config: tests/composefiles/docker-compose.v2.0.yml
+  #- label: prebuild with v2.0
+  #  command: /hello
+  #  plugins:
+  #      - docker-compose#v3.3.0:
+  #          build: helloworld
+  #          image-repository: 424332672450.dkr.ecr.us-west-1.amazonaws.com/sas94086-2
+  #          config: tests/composefiles/docker-compose.v2.0.yml
 
   - wait
   - label: run after build with v2.0
@@ -64,14 +63,14 @@ steps:
            config: tests/composefiles/docker-compose-v2.0.yml
            command: ["/hello"]
 
-  - wait
-  - label: prebuild with v2.1
-    command: /hello
-    plugins:
-       - docker-compose#v3.3.0:
-            build: helloworld
-            image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086:latest
-            config: tests/composefiles/docker-compose.v2.1.yml
+  #- wait
+  #- label: prebuild with v2.1
+  #  command: /hello
+  #  plugins:
+  #     - docker-compose#v3.3.0:
+  #         build: helloworld
+  #          image-repository: 424332672450.dkr.ecr.us-east-1.amazonaws.com/sas94086:latest
+  #          config: tests/composefiles/docker-compose.v2.1.yml
 
   - wait
   - label: run after build with v2.1
