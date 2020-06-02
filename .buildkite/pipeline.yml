@@ -97,14 +97,14 @@ steps:
            config: tests/composefiles/docker-compose.v2.1.yml
            commmand: ["/hello"]
 
-  - wait
-  - label: run after prebuild
-    plugins:
-       - docker-compose#v3.3.0:
-           run: helloworldimage
-           require-prebuild: true
-           config: tests/composefiles/docker-compose.v2.1.yml
-           commmand: ["/hello"]
+  #- wait
+  #- label: run after prebuild
+  #  plugins:
+  #    - docker-compose#v3.3.0:
+  #         run: helloworldimage
+  #        require-prebuild: true
+  #        config: tests/composefiles/docker-compose.v2.1.yml
+  #         commmand: ["/hello"]
 
   - wait
   - label: prebuild with custom image-name
